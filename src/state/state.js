@@ -4,6 +4,8 @@ import { createContext, useReducer } from 'react';
 const initialState = {
     isShow : true,
     isClicked : false,
+    newsPanel : false,
+    closed : false,
 }
 
 console.log(initialState)
@@ -17,7 +19,18 @@ let Reducer = (state,action) => {
                 isShow : false,
                 isClicked : true,
             }
-    
+        case "showpanel":
+            console.log("inside showPanel")
+            return{
+                ...state,
+                newsPanel : true
+            }
+        case "closepanel":
+            console.log("closePanel")
+            return{
+                ...state,
+                closed : true
+            }
         default:
             return{
                 ...state

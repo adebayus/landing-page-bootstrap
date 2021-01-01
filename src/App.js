@@ -5,6 +5,7 @@ import SectionHero from './component/SectionHero'
 import Highlight from './component/Highlight'
 import {  StateProvider } from './state/state'
 import Footer from './component/Footer';
+import NewsLetter from './component/NewsLetter';
 // import { CSSTransition } from 'react-transition-group'
 // import { useContext } from 'react';
 function App() {
@@ -13,9 +14,10 @@ function App() {
 		<>
 			<StateProvider>
 				<Notif />
+        <NewsLetter/> 
 				<SectionHero />
         <Highlight/>
-        <Footer/>
+        <Footer/>   
 			</StateProvider>
 		</>
   );
