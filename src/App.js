@@ -1,24 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
-
+// import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import Notif from './component/Notif'
+import SectionHero from './component/SectionHero'
+import Highlight from './component/Highlight'
+import {  StateProvider } from './state/state'
+import Footer from './component/Footer';
+// import { CSSTransition } from 'react-transition-group'
+// import { useContext } from 'react';
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+		<>
+			<StateProvider>
+				<Notif />
+				<SectionHero />
+        <Highlight/>
+        <Footer/>
+			</StateProvider>
+		</>
   );
 }
 
